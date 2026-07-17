@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "pack_name": "superpowers-hermes",
+  "source": "SOURCE.json",
+  "skills": [
+    {
+      "upstream_name": "brainstorming",
+      "upstream_path": "skills/brainstorming",
+      "target_name": "brainstorming",
+      "target_path": "skills/software-development/brainstorming",
+      "strategy": "new",
+      "required_toolsets": ["file", "terminal", "delegation"],
+      "supporting_files": ["references/visual-companion.md", "templates/spec-document-reviewer-prompt.md", "scripts/stop-server.sh", "scripts/start-server.sh", "scripts/server.cjs", "scripts/helper.js", "assets/frame-template.html"]
+    },
+    {
+      "upstream_name": "dispatching-parallel-agents",
+      "upstream_path": "skills/dispatching-parallel-agents",
+      "target_name": "dispatching-parallel-agents",
+      "target_path": "skills/software-development/dispatching-parallel-agents",
+      "strategy": "new",
+      "required_toolsets": ["delegation"]
+    },
+    {
+      "upstream_name": "executing-plans",
+      "upstream_path": "skills/executing-plans",
+      "target_name": "executing-plans",
+      "target_path": "skills/software-development/executing-plans",
+      "strategy": "new",
+      "required_toolsets": ["file", "terminal", "delegation"]
+    },
+    {
+      "upstream_name": "finishing-a-development-branch",
+      "upstream_path": "skills/finishing-a-development-branch",
+      "target_name": "finishing-a-development-branch",
+      "target_path": "skills/software-development/finishing-a-development-branch",
+      "strategy": "new",
+      "required_toolsets": ["terminal"]
+    },
+    {
+      "upstream_name": "receiving-code-review",
+      "upstream_path": "skills/receiving-code-review",
+      "target_name": "receiving-code-review",
+      "target_path": "skills/software-development/receiving-code-review",
+      "strategy": "new",
+      "required_toolsets": ["file", "terminal"]
+    },
+    {
+      "upstream_name": "requesting-code-review",
+      "upstream_path": "skills/requesting-code-review",
+      "target_name": "requesting-code-review",
+      "target_path": "~/.hermes/skills/software-development/requesting-code-review",
+      "strategy": "merge",
+      "required_toolsets": ["terminal", "delegation"],
+      "supporting_files": ["templates/code-reviewer.md"]
+    },
+    {
+      "upstream_name": "subagent-driven-development",
+      "upstream_path": "skills/subagent-driven-development",
+      "target_name": "subagent-driven-development",
+      "target_path": "skills/software-development/subagent-driven-development",
+      "strategy": "new",
+      "required_toolsets": ["file", "terminal", "delegation"],
+      "supporting_files": ["templates/implementer-prompt.md", "templates/task-reviewer-prompt.md", "scripts/task-brief", "scripts/review-package", "scripts/sdd-workspace"]
+    },
+    {
+      "upstream_name": "systematic-debugging",
+      "upstream_path": "skills/systematic-debugging",
+      "target_name": "systematic-debugging",
+      "target_path": "~/.hermes/skills/software-development/systematic-debugging",
+      "strategy": "merge",
+      "required_toolsets": ["file", "terminal"],
+      "supporting_files": ["references/root-cause-tracing.md", "references/defense-in-depth.md", "references/condition-based-waiting.md", "references/condition-based-waiting-example.ts", "scripts/find-polluter.sh"]
+    },
+    {
+      "upstream_name": "test-driven-development",
+      "upstream_path": "skills/test-driven-development",
+      "target_name": "test-driven-development",
+      "target_path": "~/.hermes/skills/software-development/test-driven-development",
+      "strategy": "merge",
+      "required_toolsets": ["terminal"],
+      "supporting_files": ["references/testing-anti-patterns.md"]
+    },
+    {
+      "upstream_name": "using-git-worktrees",
+      "upstream_path": "skills/using-git-worktrees",
+      "target_name": "using-git-worktrees",
+      "target_path": "skills/software-development/using-git-worktrees",
+      "strategy": "new",
+      "required_toolsets": ["terminal"]
+    },
+    {
+      "upstream_name": "using-superpowers",
+      "upstream_path": "skills/using-superpowers",
+      "target_name": null,
+      "target_path": "references/hermes-agent-tools.md",
+      "strategy": "runtime-policy",
+      "required_toolsets": ["file"]
+    },
+    {
+      "upstream_name": "verification-before-completion",
+      "upstream_path": "skills/verification-before-completion",
+      "target_name": "verification-before-completion",
+      "target_path": "skills/software-development/verification-before-completion",
+      "strategy": "new",
+      "required_toolsets": ["file", "terminal"]
+    },
+    {
+      "upstream_name": "writing-plans",
+      "upstream_path": "skills/writing-plans",
+      "target_name": "plan",
+      "target_path": "~/.hermes/skills/software-development/plan",
+      "strategy": "absorbed",
+      "required_toolsets": ["file", "terminal", "delegation"],
+      "supporting_files": ["templates/plan-document-reviewer-prompt.md"]
+    },
+    {
+      "upstream_name": "writing-skills",
+      "upstream_path": "skills/writing-skills",
+      "target_name": "hermes-agent-skill-authoring",
+      "target_path": "~/.hermes/skills/software-development/hermes-agent-skill-authoring",
+      "strategy": "absorbed",
+      "required_toolsets": ["file", "terminal", "delegation"],
+      "supporting_files": ["references/anthropic-best-practices.md", "references/testing-skills-with-subagents.md", "references/persuasion-principles.md", "references/graphviz-conventions.dot", "scripts/render-graphs.js", "references/CLAUDE_MD_TESTING.md"]
+    }
+  ]
+}
